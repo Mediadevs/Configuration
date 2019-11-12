@@ -9,7 +9,9 @@ use Mediadevs\Configuration\Traits\DirectoryCheckerTrait;
 
 class Configuration
 {
-    use FileCheckerTrait, DirectoryCheckerTrait, ReturnTypeTrait;
+    use ReturnTypeTrait;
+    use FileCheckerTrait;
+    use DirectoryCheckerTrait;
 
     /**
      * Return types for collecting the configuration data

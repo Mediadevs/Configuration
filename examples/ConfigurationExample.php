@@ -1,9 +1,9 @@
 <?php
 
 use Mediadevs\Configuration\Configuration;
-use \Mediadevs\Configuration\Exceptions\ConfigurationFileException;
-use \Mediadevs\Configuration\Exceptions\InvalidReturnTypeException;
-use \Mediadevs\Configuration\Exceptions\ConfigurationDirectoryException;
+use Mediadevs\Configuration\Exceptions\ConfigurationFileException;
+use Mediadevs\Configuration\Exceptions\InvalidReturnTypeException;
+use Mediadevs\Configuration\Exceptions\ConfigurationDirectoryException;
 
 try {
     $config = (new Configuration())
