@@ -62,7 +62,7 @@ class Configuration
      *
      * @param string $returnType
      *
-     * @return array|void
+     * @return array|string|void
      * @throws InvalidReturnTypeException
      * @throws Exceptions\ConfigurationFileException
      * @throws Exceptions\ConfigurationDirectoryException
@@ -73,16 +73,16 @@ class Configuration
 
         // Validating whether the configuration file and directory exists
         if ($this->configurationDirectoryExists($this->path) && $this->configurationFileExists($configuration)) {
-            $collection = require_once($configuration);
+            $collection = include($configuration);
 
             // Returning the configuration in the desired format
             switch ($returnType) {
                 case self::RETURN_TYPE_JSON:
-                    $this->returnJson($collection);
+                    return $this->returnJson($collection);
                     break;
 
                 case self::RETURN_TYPE_ARRAY:
-                    $this->returnArray($collection);
+                    return $this->returnArray($collection);
                     break;
 
                 default:
