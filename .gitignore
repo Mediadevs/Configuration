@@ -3,5 +3,4 @@ build
 composer.lock
 vendor
 phpcs.xml
-phpunit.xml
 test.php
