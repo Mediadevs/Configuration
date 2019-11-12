@@ -72,7 +72,7 @@ class Configuration
         $configuration = $this->path . DIRECTORY_SEPARATOR . $this->file . '.php';
 
         // Validating whether the configuration file and directory exists
-        if ($this->configurationDirectoryExists($configuration) && $this->configurationFileExists($configuration)) {
+        if ($this->configurationDirectoryExists($this->path) && $this->configurationFileExists($configuration)) {
             $collection = require_once($configuration);
 
             // Returning the configuration in the desired format
