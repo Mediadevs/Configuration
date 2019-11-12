@@ -32,24 +32,27 @@ git clone git@github.com:mediadevs/configuration.git
 <?php
 
 use Mediadevs\Configuration\Configuration;
+use \Mediadevs\Configuration\Exceptions\ConfigurationFileException;
+use \Mediadevs\Configuration\Exceptions\InvalidReturnTypeException;
+use \Mediadevs\Configuration\Exceptions\ConfigurationDirectoryException;
 
 try {
-    $config = (
-        new Configuration()
-    )->directory('./config')->config('config_file')->get(Configuration::RETURN_TYPE_ARRAY);
+    $config = (new Configuration())
+        ->directory('./config')
+        ->config('config_file')
+        ->get(Configuration::RETURN_TYPE_ARRAY);
     /**
      * Possible return types:
      * array:   (Configuration::RETURN_TYPE_ARRAY)
      * Json:    (Configuration::RETURN_TYPE_JSON)
      */
-} catch (\Mediadevs\Configuration\Exceptions\ConfigurationDirectoryException $e) {
+} catch (ConfigurationDirectoryException $e) {
     echo $e->errorMessage();
-} catch (\Mediadevs\Configuration\Exceptions\ConfigurationFileException $e) {
+} catch (ConfigurationFileException $e) {
     echo $e->errorMessage();
-} catch (\Mediadevs\Configuration\Exceptions\InvalidReturnTypeException $e) {
+} catch (InvalidReturnTypeException $e) {
     echo $e->errorMessage();
 }
-
 ``` 
 
 ## Contributing
