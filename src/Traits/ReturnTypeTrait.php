@@ -23,6 +23,6 @@ trait ReturnTypeTrait
      */
     protected function returnArray(array $data): array
     {
-        return (array) $data;
+        return (array) json_decode(json_encode($data), true);
     }
 }

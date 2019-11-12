@@ -78,12 +78,13 @@ class Configuration
                 case self::RETURN_TYPE_JSON:
                     $this->returnJson($collection);
                     break;
+
                 case self::RETURN_TYPE_ARRAY:
                     $this->returnArray($collection);
                     break;
+
                 default:
                     throw new InvalidReturnTypeException();
-                    break;
             }
         }
     }
