@@ -5,10 +5,11 @@
 [![Version](https://img.shields.io/packagist/v/mediadevs/configuration.svg)](https://packagist.org/packages/mediadevs/configuration)
 [![Software License][ico-license]](LICENSE.md)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/mediadevs/configuration/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
-[![Build Status](https://scrutinizer-ci.com/g/Mediadevs/configuration/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Mediadevs/configuration/build-status/master)
+[![Build Status](https://scrutinizer-ci.com/g/mediadevs/configuration/badges/build.png?b=master)](https://scrutinizer-ci.com/g/mediadevs/configuration/build-status/master)
 [![Code Coverage](https://scrutinizer-ci.com/g/mediadevs/configuration/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mediadevs/configuration/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mediadevs/configuration/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mediadevs/configuration/?branch=master)
-[![Minimum PHP Version](https://img.shields.io/badge/php-_%5E7.1-8892BF.svg)](https://github.com/symfony/symfony)
+[![Minimum PHP Version](https://img.shields.io/badge/php-_%5E7.2-8892BF.svg)](https://github.com/symfony/symfony)
+[![StyleCI](https://github.styleci.io/repos/222317005/shield?branch=master)](https://github.styleci.io/repos/222317005)
 
 ## Install
 
