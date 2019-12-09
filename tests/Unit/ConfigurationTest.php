@@ -39,7 +39,8 @@ class ConfigurationTest extends TestCase
         // Instantiating the configuration class.
         $this->configuration = new Configuration();
 
-        $toArray = [
+        // Filling in the expectations
+        $this->expectations = array(
             'Months' => [
                 'January',
                 'February',
@@ -63,12 +64,6 @@ class ConfigurationTest extends TestCase
                 'Saturday',
                 'Sunday',
             ],
-        ];
-
-        // Loading the expectations.
-        $this->expectations = array(
-            'array' => $toArray,
-            'json'  => json_encode($toArray),
         );
     }
 
@@ -87,7 +82,7 @@ class ConfigurationTest extends TestCase
                 ->config(self::CONFIGURATION_FILE)
                 ->get(Configuration::RETURN_TYPE_ARRAY);
 
-            $this->assertSame($results, $this->expectations['array']);
+            $this->assertSame($results, $this->expectations);
         } catch (ConfigurationDirectoryException $e) {
             echo $e->errorMessage();
         } catch (ConfigurationFileException $e) {
@@ -112,7 +107,7 @@ class ConfigurationTest extends TestCase
                 ->config(self::CONFIGURATION_FILE)
                 ->get(Configuration::RETURN_TYPE_JSON);
 
-            $this->assertSame($results, $this->expectations['json']);
+            $this->assertSame($results, json_encode($this->expectations));
         } catch (ConfigurationDirectoryException $e) {
             echo $e->errorMessage();
         } catch (ConfigurationFileException $e) {

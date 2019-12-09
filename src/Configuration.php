@@ -72,7 +72,7 @@ class Configuration
      *
      * @return array|string|void
      */
-    public function get(string $returnType = self::RETURN_TYPE_JSON): array
+    public function get(string $returnType = self::RETURN_TYPE_JSON)
     {
         $configuration = $this->path . DIRECTORY_SEPARATOR . $this->file . '.php';
 
