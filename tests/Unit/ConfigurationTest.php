@@ -83,10 +83,15 @@ class ConfigurationTest extends TestCase
 
             $this->assertSame($results, $this->expectations);
         } catch (ConfigurationDirectoryException $e) {
+            $this->expectException(ConfigurationDirectoryException::class);
             echo $e->errorMessage();
+
         } catch (ConfigurationFileException $e) {
+            $this->expectException(ConfigurationFileException::class);
             echo $e->errorMessage();
+
         } catch (InvalidReturnTypeException $e) {
+            $this->expectException(InvalidReturnTypeException::class);
             echo $e->errorMessage();
         }
     }
@@ -107,10 +112,15 @@ class ConfigurationTest extends TestCase
 
             $this->assertSame($results, json_encode($this->expectations));
         } catch (ConfigurationDirectoryException $e) {
+            $this->expectException(ConfigurationDirectoryException::class);
             echo $e->errorMessage();
+
         } catch (ConfigurationFileException $e) {
+            $this->expectException(ConfigurationFileException::class);
             echo $e->errorMessage();
+
         } catch (InvalidReturnTypeException $e) {
+            $this->expectException(InvalidReturnTypeException::class);
             echo $e->errorMessage();
         }
     }
