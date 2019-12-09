@@ -13,7 +13,7 @@ class ConfigurationFileException extends Exception
      */
     public function errorMessage(): string
     {
-        return 'Invalid config file! Error thrown the file: ' . $this->getMessage() . ' does not exist.' . PHP_EOL
-               . 'Error thrown at line: ' . $this->getLine() . ' in file: ' . $this->getFile() . PHP_EOL;
+        return 'Invalid config file! Error thrown the file: '.$this->getMessage().' does not exist.'.PHP_EOL
+               .'Error thrown at line: '.$this->getLine().' in file: '.$this->getFile().PHP_EOL;
     }
 }

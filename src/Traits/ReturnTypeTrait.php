@@ -5,7 +5,8 @@ namespace Mediadevs\Configuration\Traits;
 trait ReturnTypeTrait
 {
     /**
-     * Return the data as JSON
+     * Return the data as JSON.
+     *
      * @param array $data
      *
      * @return string
@@ -16,7 +17,8 @@ trait ReturnTypeTrait
     }
 
     /**
-     * Return the data as an array
+     * Return the data as an array.
+     *
      * @param array $data
      *
      * @return array
