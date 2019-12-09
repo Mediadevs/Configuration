@@ -16,8 +16,8 @@ class Configuration
     /**
      * Return types for collecting the configuration data.
      */
-    public const RETURN_TYPE_JSON = 'json';
-    public const RETURN_TYPE_ARRAY = 'array';
+    public const RETURN_TYPE_JSON = 'TYPE_JSON';
+    public const RETURN_TYPE_ARRAY = 'TYPE_ARRAY';
 
     /**
      * Path to the configuration directory.
