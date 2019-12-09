@@ -11,7 +11,7 @@ use Mediadevs\Configuration\Exceptions\ConfigurationDirectoryException;
 class ConfigurationTest extends TestCase
 {
     protected const CONFIGURATION_FILE = 'config';
-    protected const CONFIGURATION_DIRECTORY = './Fixtures';
+    protected const CONFIGURATION_DIRECTORY = 'Fixtures';
 
     /**
      * The expectations for this test.
