@@ -85,11 +85,9 @@ class ConfigurationTest extends TestCase
         } catch (ConfigurationDirectoryException $e) {
             $this->expectException(ConfigurationDirectoryException::class);
             echo $e->errorMessage();
-
         } catch (ConfigurationFileException $e) {
             $this->expectException(ConfigurationFileException::class);
             echo $e->errorMessage();
-
         } catch (InvalidReturnTypeException $e) {
             $this->expectException(InvalidReturnTypeException::class);
             echo $e->errorMessage();
@@ -114,11 +112,9 @@ class ConfigurationTest extends TestCase
         } catch (ConfigurationDirectoryException $e) {
             $this->expectException(ConfigurationDirectoryException::class);
             echo $e->errorMessage();
-
         } catch (ConfigurationFileException $e) {
             $this->expectException(ConfigurationFileException::class);
             echo $e->errorMessage();
-
         } catch (InvalidReturnTypeException $e) {
             $this->expectException(InvalidReturnTypeException::class);
             echo $e->errorMessage();
