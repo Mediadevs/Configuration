@@ -10,7 +10,7 @@ try {
         ->directory('./config')
         ->config('config_file')
         ->get(Configuration::RETURN_TYPE_ARRAY);
-    /**
+    /*
      * Possible return types:
      * array:   (Configuration::RETURN_TYPE_ARRAY)
      * Json:    (Configuration::RETURN_TYPE_JSON)

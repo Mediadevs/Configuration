@@ -7,11 +7,13 @@ use Mediadevs\Configuration\Exceptions\ConfigurationFileException;
 trait FileCheckerTrait
 {
     /**
-     * Whether the configuration file exists
+     * Whether the configuration file exists.
+     *
      * @param string $file
      *
-     * @return bool
      * @throws ConfigurationFileException
+     *
+     * @return bool
      */
     public function configurationFileExists(string $file): bool
     {

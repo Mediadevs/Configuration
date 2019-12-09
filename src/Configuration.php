@@ -2,10 +2,10 @@
 
 namespace Mediadevs\Configuration;
 
-use Mediadevs\Configuration\Exceptions\InvalidReturnTypeException;
 use Mediadevs\Configuration\Traits\ReturnTypeTrait;
 use Mediadevs\Configuration\Traits\FileCheckerTrait;
 use Mediadevs\Configuration\Traits\DirectoryCheckerTrait;
+use Mediadevs\Configuration\Exceptions\InvalidReturnTypeException;
 
 class Configuration
 {
@@ -14,25 +14,28 @@ class Configuration
     use DirectoryCheckerTrait;
 
     /**
-     * Return types for collecting the configuration data
+     * Return types for collecting the configuration data.
      */
-    public const RETURN_TYPE_JSON  = 'json';
+    public const RETURN_TYPE_JSON = 'json';
     public const RETURN_TYPE_ARRAY = 'array';
 
     /**
-     * Path to the configuration directory
+     * Path to the configuration directory.
+     *
      * @var string
      */
     private $path;
 
     /**
-     * The file name of the desired configuration file
+     * The file name of the desired configuration file.
+     *
      * @var string
      */
     private $file;
 
     /**
-     * The path to the config directory
+     * The path to the config directory.
+     *
      * @param string $path
      *
      * @return Configuration
@@ -45,7 +48,8 @@ class Configuration
     }
 
     /**
-     * The name of the configuration file
+     * The name of the configuration file.
+     *
      * @param string $file
      *
      * @return Configuration
@@ -58,22 +62,23 @@ class Configuration
     }
 
     /**
-     * Returning the contents of the configuration file
+     * Returning the contents of the configuration file.
      *
      * @param string $returnType
      *
-     * @return array|string|void
      * @throws InvalidReturnTypeException
      * @throws Exceptions\ConfigurationFileException
      * @throws Exceptions\ConfigurationDirectoryException
+     *
+     * @return array|string|void
      */
     public function get(string $returnType = self::RETURN_TYPE_JSON): array
     {
-        $configuration = $this->path . DIRECTORY_SEPARATOR . $this->file . '.php';
+        $configuration = $this->path.DIRECTORY_SEPARATOR.$this->file.'.php';
 
         // Validating whether the configuration file and directory exists
         if ($this->configurationDirectoryExists($this->path) && $this->configurationFileExists($configuration)) {
-            $collection = include($configuration);
+            $collection = include $configuration;
 
             // Returning the configuration in the desired format
             switch ($returnType) {

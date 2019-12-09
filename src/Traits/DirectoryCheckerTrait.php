@@ -7,11 +7,13 @@ use Mediadevs\Configuration\Exceptions\ConfigurationDirectoryException;
 trait DirectoryCheckerTrait
 {
     /**
-     * Whether the configuration directory exists
+     * Whether the configuration directory exists.
+     *
      * @param string $path
      *
-     * @return bool
      * @throws ConfigurationDirectoryException
+     *
+     * @return bool
      */
     public function configurationDirectoryExists(string $path): bool
     {
