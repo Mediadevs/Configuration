@@ -15,10 +15,14 @@ try {
      * array:   (Configuration::RETURN_TYPE_ARRAY)
      * Json:    (Configuration::RETURN_TYPE_JSON)
      */
-} catch (ConfigurationDirectoryException $e) {
-    echo $e->errorMessage();
-} catch (ConfigurationFileException $e) {
-    echo $e->errorMessage();
-} catch (InvalidReturnTypeException $e) {
-    echo $e->errorMessage();
+
+    // Printing the results
+    print_r($config);
+
+} catch (ConfigurationDirectoryException $exception) {
+    echo $exception->errorMessage();
+} catch (ConfigurationFileException $exception) {
+    echo $exception->errorMessage();
+} catch (InvalidReturnTypeException $exception) {
+    echo $exception->errorMessage();
 }
