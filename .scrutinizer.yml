@@ -1,16 +1,5 @@
-build:
-    nodes:
-        analysis:
-            project_setup:
-                override:
-                    - 'true'
-                    - php-scrutinizer-run
-            tests:
-                override:
-                    - php ./vendor/bin/phpunit --configuration tests/phpunit.xml --testsuite scrutinizer
-
 filter:
-  excluded_paths: [tests/*]
+    excluded_paths: [tests/*]
 
 checks:
     php:
@@ -28,7 +17,26 @@ checks:
         fix_identation_4spaces: true
         fix_doc_comments: true
 
-tools:
-    external_code_coverage:
-        timeout: 600
-        runs: 3
+build:
+    environment:
+        php:
+            version: 7.2
+    dependencies:
+        before:
+            - composer require phpunit/phpunit:8 --dev
+            - composer require seferov/typhp:^0.2.0 --dev
+            - composer require phpstan/phpstan:^0.11.0 --dev
+            - composer require squizlabs/php_codesniffer:3.* --dev
+            - composer require nunomaduro/phpinsights:^1.11.1 --dev
+            - composer require php-coveralls/php-coveralls:^2.0 --dev
+            - composer require sempro/phpunit-pretty-print:^1.2.1 --dev
+    tests:
+        override:
+            - php-scrutinizer-run
+            - phpcs-run
+            - vendor/bin/typhp
+            - vendor/bin/phpinsights
+            -   command: vendor/bin/phpunit --coverage-text --coverage-clover clover.xml
+                coverage:
+                    file: clover.xml
+                    format: php-clover

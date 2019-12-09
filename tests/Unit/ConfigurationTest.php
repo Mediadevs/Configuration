@@ -6,5 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 class ConfigurationTest extends TestCase
 {
-
+    /**
+     * Todo: Write tests
+     */
 }

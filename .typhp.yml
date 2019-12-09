@@ -1,0 +1,9 @@
+project:
+    directories:
+        - 'src'
+        - 'tests'
+    exclude:
+        directories:
+            - '.github'
+            - 'config'
+            - 'examples'

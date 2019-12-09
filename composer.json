@@ -1,6 +1,6 @@
 {
   "name": "mediadevs/configuration",
-  "description": "A lightweigth package for managing configuration files.",
+  "description": "A lightweight package for managing configuration files.",
   "license": "MIT",
   "authors": [
     {
@@ -17,13 +17,16 @@
     }
   },
   "require": {
-    "php": "^7.1",
-    "ext-json": "*"
+      "php": "^7.2",
+      "ext-json": "*"
   },
     "require-dev": {
-        "phpstan/phpstan": ">0.11.0",
-        "phpunit/phpunit": "7",
+        "phpunit/phpunit": "8",
+        "seferov/typhp": "^0.2.0",
+        "phpstan/phpstan": "^0.11.0",
+        "squizlabs/php_codesniffer": "3.*",
+        "nunomaduro/phpinsights": "^1.11.1",
         "php-coveralls/php-coveralls": "^2.0",
-        "squizlabs/php_codesniffer": "3.*"
+        "sempro/phpunit-pretty-print":"^1.2.1"
     }
 }
