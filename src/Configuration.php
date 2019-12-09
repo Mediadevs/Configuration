@@ -79,11 +79,9 @@ class Configuration
             switch ($returnType) {
                 case self::RETURN_TYPE_JSON:
                     return $this->returnJson($collection);
-                    break;
 
                 case self::RETURN_TYPE_ARRAY:
                     return $this->returnArray($collection);
-                    break;
 
                 default:
                     throw new InvalidReturnTypeException();
