@@ -17,7 +17,7 @@ trait FileCheckerTrait
      */
     public function configurationFileExists(string $file): bool
     {
-        // An exception will be thrown if the directory doesn't exist
+        // An exception will be thrown if the file doesn't exist
         if (file_exists($file)) {
             return true;
         } else {

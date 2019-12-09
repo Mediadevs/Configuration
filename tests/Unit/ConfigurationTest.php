@@ -70,7 +70,6 @@ class ConfigurationTest extends TestCase
     /**
      * @test Whether the config can be collected and if the results are returned as an array.
      * @testdox The configuration file can be collected as an array.
-     * @covers \Mediadevs\Configuration\Configuration::returnArray
      *
      * @return void
      */
@@ -95,7 +94,6 @@ class ConfigurationTest extends TestCase
     /**
      * @test Whether the config can be collected and if the results are returned as JSON.
      * @testdox The configuration file can be collected as JSON.
-     * @covers \Mediadevs\Configuration\Configuration::returnJson
      *
      * @return void
      */
