@@ -13,7 +13,7 @@ return [
         'September',
         'October',
         'November',
-        'December'
+        'December',
     ],
     'Days' => [
         'Monday',
@@ -22,6 +22,6 @@ return [
         'Thursday',
         'Friday',
         'Saturday',
-        'Sunday'
-    ]
+        'Sunday',
+    ],
 ];

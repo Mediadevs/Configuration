@@ -2,11 +2,11 @@
 
 namespace Mediadevs\Configuration\Tests;
 
+use PHPUnit\Framework\TestCase;
 use Mediadevs\Configuration\Configuration;
-use Mediadevs\Configuration\Exceptions\ConfigurationDirectoryException;
 use Mediadevs\Configuration\Exceptions\ConfigurationFileException;
 use Mediadevs\Configuration\Exceptions\InvalidReturnTypeException;
-use PHPUnit\Framework\TestCase;
+use Mediadevs\Configuration\Exceptions\ConfigurationDirectoryException;
 
 class ConfigurationTest extends TestCase
 {
@@ -52,7 +52,7 @@ class ConfigurationTest extends TestCase
                 'September',
                 'October',
                 'November',
-                'December'
+                'December',
             ],
             'Days' => [
                 'Monday',
@@ -61,14 +61,14 @@ class ConfigurationTest extends TestCase
                 'Thursday',
                 'Friday',
                 'Saturday',
-                'Sunday'
-            ]
+                'Sunday',
+            ],
         ];
 
         // Loading the expectations.
         $this->expectations = array(
             'array' => $toArray,
-            'json'  => json_encode($toArray)
+            'json'  => json_encode($toArray),
         );
     }
 
