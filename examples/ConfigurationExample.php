@@ -18,7 +18,7 @@ try {
 
     // Printing the results
     print_r($config);
-// Handling the exceptions
+    // Handling the exceptions
 } catch (ConfigurationDirectoryException $exception) {
     echo $exception->errorMessage();
 } catch (ConfigurationFileException $exception) {
