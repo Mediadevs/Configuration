@@ -74,7 +74,7 @@ class Configuration
      */
     public function get(string $returnType = self::RETURN_TYPE_JSON): array
     {
-        $configuration = $this->path.DIRECTORY_SEPARATOR.$this->file.'.php';
+        $configuration = $this->path . DIRECTORY_SEPARATOR . $this->file . '.php';
 
         // Validating whether the configuration file and directory exists
         if ($this->configurationDirectoryExists($this->path) && $this->configurationFileExists($configuration)) {
